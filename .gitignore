@@ -51,3 +51,7 @@ local.properties
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Allow Gradle Wrapper #
+########################
+!/gradle/wrapper/gradle-wrapper.jar
