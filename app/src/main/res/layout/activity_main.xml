@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/EncryptTextLBL"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:text="Text to Encrypt"
+        android:fontFamily="monospace"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id = "@+id/InputTextEDT"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EncryptTextLBL"
+        />
+
+
+    <Button
+        android:id="@+id/AESEncryptBTN"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Encrypt AES"
+        android:onClick="AesEncryptionClick"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toStartOf="@id/AESDecryptBTN"
+        app:layout_constraintStart_toStartOf="@id/InputTextEDT"
+        app:layout_constraintTop_toBottomOf="@id/InputTextEDT"
+        />
+
+    <Button
+        android:id="@+id/AESDecryptBTN"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Decrypt AES"
+        android:onClick="AesDecryptionClick"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/AESEncryptBTN"
+        app:layout_constraintTop_toBottomOf="@id/InputTextEDT"
+        />
+
+    <TextView
+        android:id="@+id/DecryptTextLBL"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:fontFamily="monospace"
+        android:text="Decrypted Text"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ResultTextEDT"
+        />
+
+    <EditText
+        android:id="@+id/ResultTextEDT"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:inputType="none"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
